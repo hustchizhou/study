@@ -20,6 +20,7 @@ int main()
 		*s2 = s1[len];
 		printf("s2[%d]=%c\n",len,*s2);
 	}
+        printf("modified in different line of branch dev\n");
 	printf("s1=%s\n",s1);
 	printf("s2=0x%x\n",s2);
 	printf("s2=%s\n",s2);
