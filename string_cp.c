@@ -24,5 +24,6 @@ int main()
 	printf("s2=0x%x\n",s2);
 	printf("s2=%s\n",s2);
         printf("modified in master branch\n");
+        printf("modified in branch dev\n");
 	return 0;
 }
