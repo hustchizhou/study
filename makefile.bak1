@@ -1,0 +1,18 @@
+output: TimeSliceRunStructure.o Task_Pt.o
+	gcc TimeSliceRunStructure.o Task_Pt.o -o output
+TimeSliceRunStructure.o: TimeSliceRunStructure.s
+	gcc -c TimeSliceRunStructure.s -o TimeSliceRunStructure.o
+Task_Pt.o: Task_Pt.s
+	gcc -c Task_Pt.s -o Task_Pt.o
+TimeSliceRunStructure.s: TimeSliceRunStructure.i
+	gcc -S TimeSliceRunStructure.i -o TimeSliceRunStructure.s
+Task_Pt.s: Task_Pt.i
+	gcc -S Task_Pt.i -o Task_Pt.s
+TimeSliceRunStructure.i: TimeSliceRunStructure.c
+	gcc -E TimeSliceRunStructure.c -o TimeSliceRunStructure.i
+Task_Pt.i: Task_Pt.c
+	gcc -E Task_Pt.c -o Task_Pt.i
+clean:
+	rm *.o *.i *.s
+
+       	
