@@ -18,8 +18,8 @@ void main(void)
 	int b[4]={5,6,7,8};
 	int *ptr1,*ptr2;
 	ptr1=(int *)(&a+1);
-	//int d=(int)a+4;
-	intptr_t d=(uintptr_t)a+4;
+	long int d=(unsigned long int)a+4;
+	//intptr_t d=(uintptr_t)a+4;
 	ptr2=(int *)d;
 	int *c=(a+1);
 	printf("%x,%x,%x\n",ptr1,ptr2,c);
